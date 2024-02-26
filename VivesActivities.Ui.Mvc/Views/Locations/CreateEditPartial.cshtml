@@ -1,0 +1,34 @@
+﻿@model Location
+
+<div asp-validation-summary="ModelOnly"></div>
+
+<div class="mb-3">
+    <label asp-for="Name" class="form-label"></label>
+    <input asp-for="Name" class="form-control"/>
+    <span asp-validation-for="Name"></span>
+</div>
+<div class="mb-3">
+    <label asp-for="Description" class="form-label"></label>
+    <textarea asp-for="Description" class="form-control"></textarea>
+    <span asp-validation-for="Description"></span>
+</div>
+<div class="mb-3">
+    <label asp-for="Building" class="form-label"></label>
+    <input asp-for="Building" class="form-control" />
+    <span asp-validation-for="Building"></span>
+</div>
+<div class="mb-3">
+    <label asp-for="Room" class="form-label"></label>
+    <input asp-for="Room" class="form-control" />
+    <span asp-validation-for="Room"></span>
+</div>
+<div class="mb-3">
+    <label asp-for="Latitude" class="form-label"></label>
+    <input type="number" step="0.00001" asp-for="Latitude" class="form-control" />
+    <span asp-validation-for="Latitude"></span>
+</div>
+<div class="mb-3">
+    <label asp-for="Longitude" class="form-label"></label>
+    <input type="number" step="0.00001" asp-for="Longitude" class="form-control" />
+    <span asp-validation-for="Longitude"></span>
+</div>

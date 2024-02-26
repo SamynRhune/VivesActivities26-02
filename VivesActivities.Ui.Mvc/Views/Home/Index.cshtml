@@ -1,0 +1,27 @@
+﻿@model IList<VivesActivity>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<h2>Featured</h2>
+@{
+    var firstActivity = Model.FirstOrDefault();
+    if (firstActivity is not null)
+    {
+        <partial name="VivesActivityPartial" model="firstActivity"/>
+    }
+}
+<h2>All activities</h2>
+<div class="row">
+@foreach (var activity in Model)
+{
+    <div class="col-4">
+       <partial name="VivesActivityPartial" model="activity"/>
+    </div>
+}
+</div>

@@ -1,0 +1,21 @@
+﻿@model Location
+
+<tr>
+    <td>@Model.Name</td>
+    <td>@Model.Building</td>
+    <td>@Model.Room</td>
+    <td>@Model.Latitude</td>
+    <td>@Model.Longitude</td>
+    <td>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary">Edit</a>
+        <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger" 
+                data-bs-toggle="modal" 
+                data-bs-target="#deleteModal"
+                data-id="@Model.Id"
+                data-role="Delete">
+            Delete with modal
+        </button>
+    </td>
+</tr>
